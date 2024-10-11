@@ -209,6 +209,37 @@ for index, val in enumerate(data):
 print(data)
 print()
 
+print('-'*10)
+data = [10.5, 11.2, 9.8, None, 11.5, None]
+count = sum(1 for val in data if val is not None)
+total = sum(val for val in data if val is not None)
+average = total/count
+data = [val if val is not None else average for val in data]
+print(data)
+print()
 
+print('-'*10)
+from statistics import fmean
+data = [10.5, 11.2, 9.8, None, 11.5, None]
+#average = fmean(data)
+average = fmean(val for val in data if val is not None)
+print(average)
+print()
+
+print('-'*10)
+from statistics import fmean
+data = [10.5, 11.2, 9.8, None, 11.5, None]
+average = fmean(val for val in data if val is not None)
+data2 = [val if val is not None else average for val in data]
+print(data)
+print(data2)
+print(data is data2)
+print()
+
+import pandas as pd
+data = [10.5, 11.2, 9.8, None, 11.5, None]
+df = pd.DataFrame(data)
+df.fillna(df.mean(), inplace=True)
+print(df[0].tolist())
 
 
