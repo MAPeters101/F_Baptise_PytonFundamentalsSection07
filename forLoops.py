@@ -139,7 +139,75 @@ for row_idx, row in enumerate(m):
         print(f'[{row_idx}, {col_idx}] = {element}')
 print()
 
+data = [10.5, 11.2, 9.8, None, 11.5, None]
 
+count = 0
+total = 0
+for i in range(len(data)):
+    if data[i] is not None:
+        count += 1
+        total += data[i]
+average = total/count
+print(average)
+print()
+
+count = 0
+total = 0
+for val in data:
+    if val is not None:
+        count += 1
+        total += val
+average = total/count
+print(average)
+print()
+
+for i in range(len(data)):
+    if data[i] is  None:
+        data[i] = average
+print(data)
+print()
+
+data = [10.5, 11.2, 9.8, None, 11.5, None]
+for index, val in enumerate(data):
+    if val is None:
+        data[index] = average
+print(data)
+print()
+
+print('-'*10)
+data = [10.5, 11.2, 9.8, None, 11.5, None]
+count = 0
+total = 0
+for i in range(len(data)):
+    if data[i] is not None:
+        count += 1
+        total += data[i]
+average = total/count
+print(average)
+print()
+for i in range(len(data)):
+    if data[i] is  None:
+        data[i] = average
+print(data)
+print()
+
+
+print('-'*10)
+data = [10.5, 11.2, 9.8, None, 11.5, None]
+count = 0
+total = 0
+for val in data:
+    if val is not None:
+        count += 1
+        total += val
+average = total/count
+print(average)
+print()
+for index, val in enumerate(data):
+    if val is None:
+        data[index] = average
+print(data)
+print()
 
 
 
